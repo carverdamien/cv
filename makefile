@@ -1,5 +1,5 @@
 NAME=carver
-${NAME}.pdf:${NAME}.tex
+${NAME}.pdf:${NAME}.tex $(wildcard *.tex */*.tex)
 	@echo | xelatex $< 2>&1 > /dev/null
 	@echo "UPDATED : $$(date)"
 
